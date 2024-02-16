@@ -327,13 +327,13 @@ Exit after each command by typing `q` and press enter.
     ssh -i privatekey.pem ec2-user@ec2-xx-xxx-xxx-xxx.compute-1.amazonaws.com -ND 8157
     ```
 
-    2. Navigate to [http://prometheus.monitoring:9090]([http://prometheus.monitoring:9090) and verify you can view main page
+    2. Navigate to [http://prometheus.monitoring:9090]([http://prometheus.migration:9090) and verify you can view main page
 
-    3. Navigate to [http://graphana.monitoring:3000](http://graphana.monitoring:3000) and verify you can view dashboard
+    3. Navigate to [http://graphana.monitoring:3000](http://graphana.migration:3000) and verify you can view dashboard
 
     4. The default username and password is `admin`
 
-    5. Add a new source: 1- Select Prometheus as type 2- Enter: `http://prometheus.monitoring:9090` as URL 3-Click **Test and Save** button
+    5. Add a new source: 1- Select Prometheus as type 2- Enter: `http://prometheus.migration:9090` as URL 3-Click **Test and Save** button
 
     5. Import the [Grafana/MM2-dashboard-1.json](Grafana/MM2-dashboard-1.json) monitoring dashboard
 
