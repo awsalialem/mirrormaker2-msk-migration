@@ -327,7 +327,7 @@ Exit after each command by typing `q` and press enter.
     ssh -i privatekey.pem ec2-user@ec2-xx-xxx-xxx-xxx.compute-1.amazonaws.com -ND 8157
     ```
 
-    2. Navigate to [http://prometheus.migration:9090]([http://prometheus.migration:9090) and verify you can view main page
+    2. Navigate to [http://prometheus.migration:9090](http://prometheus.migration:9090) and verify you can view main page
 
     3. Navigate to [http://graphana.migration:3000](http://graphana.migration:3000) and verify you can view dashboard
 
