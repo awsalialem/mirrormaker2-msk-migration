@@ -329,7 +329,7 @@ Exit after each command by typing `q` and press enter.
 
     2. Navigate to [http://prometheus.migration:9090](http://prometheus.migration:9090) and verify you can view main page
 
-    3. Navigate to [http://graphana.migration:3000](http://graphana.migration:3000) and verify you can view dashboard
+    3. Navigate to [http://grafana.migration:3000](http://grafana.migration:3000) and verify you can view dashboard
 
     4. The default username and password is `admin`
 
