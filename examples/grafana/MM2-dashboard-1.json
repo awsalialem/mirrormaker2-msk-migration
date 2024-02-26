@@ -3,7 +3,10 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -13,10 +16,11 @@
     ]
   },
   "editable": true,
-  "gnetId": null,
+  "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 2,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "aliasColors": {},
@@ -26,7 +30,8 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "links": [],
+          "unitScale": true
         },
         "overrides": []
       },
@@ -53,9 +58,10 @@
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "10.3.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -65,16 +71,16 @@
       "steppedLine": false,
       "targets": [
         {
+          "editorMode": "code",
           "expr": "kafka_connect_mirror_source_connector_replication_latency_ms_avg",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{topic}} {{partition}}",
+          "range": true,
           "refId": "A"
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "MM2-Repl-Latency-Ms-Avg",
       "tooltip": {
         "shared": true,
@@ -83,33 +89,24 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -117,10 +114,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "links": [],
+          "unitScale": true
         },
         "overrides": []
       },
@@ -147,9 +144,10 @@
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "10.3.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -159,16 +157,16 @@
       "steppedLine": false,
       "targets": [
         {
+          "editorMode": "code",
           "expr": "kafka_consumer_fetch_manager_records_lag{topic=\"ExampleTopic\"}",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{topic}} {{partition}} {{clientId}}",
+          "range": true,
           "refId": "A"
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "MM2-Consumer-Lag",
       "tooltip": {
         "shared": true,
@@ -177,33 +175,24 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -211,10 +200,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "links": [],
+          "unitScale": true
         },
         "overrides": []
       },
@@ -241,9 +230,10 @@
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "10.3.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -253,16 +243,16 @@
       "steppedLine": false,
       "targets": [
         {
+          "editorMode": "code",
           "expr": "kafka_connect_mirror_source_connector_record_age_ms_avg",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{topic}} {{partition}}",
+          "range": true,
           "refId": "A"
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "MM2-Record-Age-Ms-Avg",
       "tooltip": {
         "shared": true,
@@ -271,33 +261,24 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -305,10 +286,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "links": [],
+          "unitScale": true
         },
         "overrides": []
       },
@@ -335,9 +316,10 @@
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "10.3.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -347,16 +329,16 @@
       "steppedLine": false,
       "targets": [
         {
+          "editorMode": "code",
           "expr": "kafka_consumer_fetch_manager_fetch_latency_avg",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{topic}} {{partition}} {{clientId}}",
+          "range": true,
           "refId": "A"
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "MM2-Consumer-Fetch-Latency",
       "tooltip": {
         "shared": true,
@@ -371,33 +353,24 @@
       ],
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -405,10 +378,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "links": [],
+          "unitScale": true
         },
         "overrides": []
       },
@@ -435,9 +408,10 @@
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "10.3.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -447,9 +421,11 @@
       "steppedLine": false,
       "targets": [
         {
+          "editorMode": "code",
           "expr": "kafka_connect_source_task_source_record_active_count{connector!=\"mm2-hbc\"}",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{connector}}",
+          "range": true,
           "refId": "A"
         },
         {
@@ -460,9 +436,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "MM2-Source-Task",
       "tooltip": {
         "shared": true,
@@ -471,50 +445,41 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     }
   ],
-  "refresh": false,
-  "schemaVersion": 25,
-  "style": "dark",
+  "refresh": "",
+  "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "MM2",
   "uid": "PEX7STkMk",
-  "version": 7
+  "version": 2,
+  "weekStart": ""
 }
